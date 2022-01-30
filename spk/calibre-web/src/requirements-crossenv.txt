@@ -1,0 +1,8 @@
+calibreweb==0.6.16
+calibreweb[gmail]==0.6.16
+calibreweb[goodreads]==0.6.16
+calibreweb[ldap]==0.6.16
+calibreweb[oauth]==0.6.16
+calibreweb[metadata]==0.6.16
+calibreweb[comics]==0.6.16
+calibreweb[kobo]==0.6.16
