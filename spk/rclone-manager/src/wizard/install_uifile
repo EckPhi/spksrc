@@ -1,0 +1,51 @@
+[
+    {
+        "step_title": "Admin Credentials",
+        "invalid_next_disabled": true,
+        "items": [
+            {
+                "desc": "Choose credentials for the RClone Manager web interface. Use HTTPS through DSM reverse proxy when accessing it over an untrusted network."
+            },
+            {
+                "type": "textfield",
+                "subitems": [
+                    {
+                        "key": "wizard_username",
+                        "desc": "Username",
+                        "defaultValue": "admin",
+                        "validator": {
+                            "allowBlank": false,
+                            "minLength": 1,
+                            "regex": {
+                                "expr": "/^[a-zA-Z0-9_-]+$/",
+                                "errorText": "Username can only contain letters, numbers, underscores and hyphens"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "password",
+                "subitems": [
+                    {
+                        "key": "wizard_password",
+                        "desc": "Password (minimum 12 characters)",
+                        "defaultValue": "",
+                        "validator": {
+                            "allowBlank": false,
+                            "minLength": 12
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "step_title": "Permissions Notice",
+        "items": [
+            {
+                "desc": "In File Station, grant the system internal user <b>sc-rclone-manager</b> access to shared folders that RClone Manager should manage. Mounting may require additional system permissions and is not configured by this package."
+            }
+        ]
+    }
+]
